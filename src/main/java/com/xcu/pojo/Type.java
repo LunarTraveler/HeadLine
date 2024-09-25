@@ -1,0 +1,27 @@
+package com.xcu.pojo;
+
+import com.baomidou.mybatisplus.annotation.*;
+
+import java.io.Serializable;
+import lombok.Data;
+
+/**
+ * @TableName news_type
+ */
+@Data
+public class Type implements Serializable {
+
+    // 这个是主键id的值与相应的类型是对应的，不是手动定义的，从1开始的
+    @TableId
+    private Integer tid;
+
+    private String tname;
+
+    @Version
+    private Integer version;
+
+    @TableLogic
+    private Integer isDeleted;
+
+    private static final long serialVersionUID = 1L;
+}
